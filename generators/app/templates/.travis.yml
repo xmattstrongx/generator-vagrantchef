@@ -1,0 +1,8 @@
+language: <%= language %>
+addons:
+    apt:
+        packages:
+            - rubygems
+before_install:
+    - gem install chef-zero
+    - chef-zero

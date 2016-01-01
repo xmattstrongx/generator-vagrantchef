@@ -1,0 +1,5 @@
+source 'https://supermarket.chef.io'
+
+# cookbook 'foobar', '~> 1.0.0'
+
+cookbook '<%= name %>', path: '<%= name %>/'
