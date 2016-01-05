@@ -58,7 +58,7 @@ module.exports = yeoman.generators.Base.extend({
         );
 
         this.fs.copyTpl(
-            this.templatePath('.travis.yml'),
+            this.templatePath('travis.yml'),
             this.destinationPath('.travis.yml'),
             this.props
         );
@@ -73,6 +73,15 @@ module.exports = yeoman.generators.Base.extend({
             this.templatePath('recipe-default.rb'),
             this.destinationPath('cookbooks/' + this.props.name + '/recipes/default.rb'),
             this.props
+        );
+
+        this.fs.copyTpl(
+            this.templatePath('template-demo.erb'),
+            this.destinationPath('cookbooks/' + this.props.name + '/templates/demo.erb'),
+            this.props,
+            {
+                delimiter: '?'
+            }
         );
 
         this.fs.copyTpl(

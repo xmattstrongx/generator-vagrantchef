@@ -6,6 +6,7 @@ Vagrant.configure("2") do |config|
     :group => 'vagrant',
     :owner => 'vagrant'
   )
+
   config.vm.define :ballotbox do |ballotbox|
 
     # There is a bug with synced folders: when :create and :owner are specified, the created parent folders are root-owned rather

@@ -3,7 +3,7 @@ sudo: yes
 before_install:
     - wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/10.04/i686/chef_12.6.0-1_i386.deb -O chef.deb
     - sudo dpkg -i chef.deb
-    - sudo chef-client -z -o test
+    - sudo chef-client -z -o test -j 
 # The below build steps are provided so that the build is by default green. 
 # Remove if the built-in steps for your language are appropriate, or customize them.
 install: /bin/true
