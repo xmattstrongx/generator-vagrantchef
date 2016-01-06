@@ -1,1 +1,1 @@
-default['<%= name %>']['dummy'] = ''
+default['<%= name %>']['color'] = 'red'

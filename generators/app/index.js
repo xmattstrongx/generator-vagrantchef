@@ -80,8 +80,14 @@ module.exports = yeoman.generators.Base.extend({
         );
 
     this.fs.copyTpl(
-            this.templatePath('recipe-default.rb'),
-            this.destinationPath('cookbooks/' + this.props.name + '/recipes/default.rb'),
+            this.templatePath('recipe-create_file.rb'),
+            this.destinationPath('cookbooks/' + this.props.name + '/recipes/create_file.rb'),
+            this.props
+        );
+
+    this.fs.copyTpl(
+            this.templatePath('recipe-template_file.rb'),
+            this.destinationPath('cookbooks/' + this.props.name + '/recipes/template_file.rb'),
             this.props
         );
 

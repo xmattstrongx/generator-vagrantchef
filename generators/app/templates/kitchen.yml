@@ -13,4 +13,5 @@ platforms:
 suites:
   - name: test
     run_list:
-      - recipe[test]
+        - recipe[<%= name %>::create_file]
+        - recipe[<%= name %>::template_file]

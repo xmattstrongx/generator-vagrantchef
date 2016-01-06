@@ -24,7 +24,8 @@ describe('generator-vagrantchef:app', function () {
       'cookbooks/Berksfile',
       'cookbooks/foobar/metadata.rb',
       'cookbooks/foobar/attributes/foobar.rb',
-      'cookbooks/foobar/recipes/default.rb',
+      'cookbooks/foobar/recipes/create_file.rb',
+      'cookbooks/foobar/recipes/template_file.rb',
       'cookbooks/foobar/templates/demo.erb'
     ]);
   });
