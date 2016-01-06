@@ -20,21 +20,21 @@ module.exports = yeoman.generators.Base.extend({
       message: 'What is this project\'s name?',
       default: path.basename(process.cwd())
     }, {
-        type: 'input',
-        name: 'syncPath',
-        message: 'Synced folder path? Where, in the virtual machine, should the root folder of this project be mounted?',
-        default: '/' + path.basename(process.cwd())
-      }, {
-          type: 'input',
-          name: 'language',
-          message: 'Travis-CI language?',
-          default: 'ruby'
-        }, {
-          type: 'input',
-          name: 'maintainer',
-          message: 'Who is the maintainer of this project?',
-          default: 'Joe Smith <jsmith@gmail.com>'
-        }];
+      type: 'input',
+      name: 'syncPath',
+      message: 'Synced folder path? Where, in the virtual machine, should the root folder of this project be mounted?',
+      default: '/' + path.basename(process.cwd())
+    }, {
+      type: 'input',
+      name: 'language',
+      message: 'Travis-CI language?',
+      default: 'ruby'
+    }, {
+      type: 'input',
+      name: 'maintainer',
+      message: 'Who is the maintainer of this project?',
+      default: 'Joe Smith <jsmith@gmail.com>'
+    }];
 
     this.prompt(prompts, function (props) {
       this.props = props;
