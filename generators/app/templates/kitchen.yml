@@ -1,0 +1,16 @@
+---
+driver:
+  name: vagrant
+  synced_folders:
+      - [".", "/<%= syncPath %>", ":create => true, :group => 'vagrant', :owner => 'vagrant' "]
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: test
+    run_list:
+      - recipe[test]

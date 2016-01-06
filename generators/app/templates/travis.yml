@@ -1,14 +1,13 @@
-language: <%= language %>
-sudo: yes
+sudo: required
+language: go
 
-before_install:
-    - wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/10.04/i686/chef_12.6.0-1_i386.deb -O chef.deb
-    - sudo dpkg -i chef.deb
-    - sudo chef-client --local-mode --override-runlist <%= name %>
+install:
+    # Install Chef via the Omnibus installer + ChefDK
+  - curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -P chefdk
+    # Chef includes an embedded installation of Ruby. Update RubyGems from within that embedded Ruby. 
+  - chef exec bundle update
 
-# The below build steps are provided so that the build is by default green. 
-# Remove if the built-in steps for your language are appropriate, or customize them.
-
-install: /bin/true
-before_script: /bin/true
-script: /bin/true
+script:
+    # Within the Chef embedded ruby, within the environment that includes binaries that were installed by RubyGems, 
+    # run kitchen test. 
+    - KITCHEN_YAML=travis.kitchen.yml chef exec bundle exec kitchen test -c 2

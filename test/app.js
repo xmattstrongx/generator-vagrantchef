@@ -18,7 +18,8 @@ describe('generator-vagrantchef:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'Vagrantfile',
+      '.kitchen.yml',
+      'travis.kitchen.yml',
       '.travis.yml',
       'cookbooks/Berksfile',
       'cookbooks/foobar/metadata.rb',

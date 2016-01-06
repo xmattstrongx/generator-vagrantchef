@@ -1,0 +1,14 @@
+---
+driver:
+  name: localhost
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: localhost
+
+suites:
+  - name: test
+    run_list:
+      - recipe[test]
