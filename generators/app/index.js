@@ -59,17 +59,16 @@ module.exports = yeoman.generators.Base.extend({
 
     this.fs.copy(
             this.templatePath('travis.yml'),
-            this.destinationPath('.travis.yml'),
-            this.props
+            this.destinationPath('.travis.yml')
         );
 
-    this.fs.copy(
+    this.fs.copyTpl(
             this.templatePath('kitchen.yml'),
             this.destinationPath('.kitchen.yml'),
             this.props
         );
 
-    this.fs.copy(
+    this.fs.copyTpl(
             this.templatePath('travis.kitchen.yml'),
             this.destinationPath('travis.kitchen.yml'),
             this.props
@@ -77,8 +76,7 @@ module.exports = yeoman.generators.Base.extend({
 
     this.fs.copy(
             this.templatePath('Gemfile'),
-            this.destinationPath('Gemfile'),
-            this.props
+            this.destinationPath('Gemfile')
         );
 
     this.fs.copyTpl(

@@ -2,7 +2,7 @@
 driver:
   name: vagrant
   synced_folders:
-      - [".", "/<%= syncPath %>", ":create => true, :group => 'vagrant', :owner => 'vagrant' "]
+      - [".", "<%= syncPath %>", ":create => true, :group => 'vagrant', :owner => 'vagrant' "]
 
 provisioner:
   name: chef_zero
