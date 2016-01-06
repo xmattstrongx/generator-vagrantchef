@@ -15,16 +15,16 @@ module.exports = yeoman.generators.Base.extend({
         ));
 
     var prompts = [{
+      type: 'input',
+      name: 'name',
+      message: 'What is this project\'s name?',
+      default: path.basename(process.cwd())
+    }, {
         type: 'input',
-        name: 'name',
-        message: 'What is this project\'s name?',
-        default: path.basename(process.cwd())
+        name: 'syncPath',
+        message: 'Synced folder path? Where, in the virtual machine, should the root folder of this project be mounted?',
+        default: '/' + path.basename(process.cwd())
       }, {
-          type: 'input',
-          name: 'syncPath',
-          message: 'Synced folder path? Where, in the virtual machine, should the root folder of this project be mounted?',
-          default: '/' + path.basename(process.cwd())
-        }, {
           type: 'input',
           name: 'language',
           message: 'Travis-CI language?',
@@ -37,11 +37,11 @@ module.exports = yeoman.generators.Base.extend({
         }];
 
     this.prompt(prompts, function (props) {
-        this.props = props;
+      this.props = props;
             // To access props later use this.props.someOption;
 
-        done();
-      }.bind(this));
+      done();
+    }.bind(this));
   },
 
   writing: function () {
@@ -85,9 +85,9 @@ module.exports = yeoman.generators.Base.extend({
             this.templatePath('template-demo.erb'),
             this.destinationPath('cookbooks/' + this.props.name + '/templates/demo.erb'),
             this.props,
-        {
-          delimiter: '?'
-        }
+      {
+        delimiter: '?'
+      }
         );
 
     this.fs.copyTpl(
