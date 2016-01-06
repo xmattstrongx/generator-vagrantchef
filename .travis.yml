@@ -4,3 +4,10 @@ node_js:
   - v4
   - '0.12'
   - '0.10'
+deploy:
+    on:
+        tags: true
+    provider: npm
+    email: "npm@jacob.jacobgreenleaf.com"
+    api_key: 
+        secure: "rAJAw0+3f1/RSJPUXYLiS4Q8OE0kJQS1dgHURM/PYGuCzPXyaiDLJnyN4I7D4Z4u+3Tk3So4boN714HqQrF9QofEWeEvfxGxte19V/eS8Mckh1d/YRU7xH0IXJ9g1nmK7JPYzYx23fIyPWQKfCDG7HxDutmTQ7YlyfXn1B6YF3cBRqUyf5hjre2Hk2xEeVHZcfarlwH7czKZxehLjg8KQI+PzF3cPKWXYmSj2Thj29YgaE1i9XKb6Uj5Hiir+AhImu/aGoBg3QHabAf9aKnfXqEEx6p4UAywJBovSNiuj+UHVW0IIX9/DINp1OS9j3utrSSEhnOeg8YxIrffvUNPquUdFhQzxxSMYVcHXVKIBkDJ6dFgMNvvRt2fnuxON6A8tQA8lRdF+Db2qCYdEP59dSTaO9tXZWLzzvXkYkR0xivVwNWQMBpcEY3LsCIxNxrKI0NqNzbagpK0giZbe4cl+sB+SUWgwVdiUXkt5C/tuOE4yQR5+x208AEq5jhFKVzG4RojipwGiMBStqY3yHXvzBritSb/OA73aHxA0paQvl4uZMpnZKvFIHUHbZYufXEeGuxd26yGWs7L7xBYyKFGzTYXlsdQD7rmJFOk+g4Ofhr5u7psP3zasR0fJ7UQGHF0AzU866Mreo5lCykkxORw6E/D2hlTRfDA9SEQjMbEOg8="
