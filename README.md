@@ -31,7 +31,7 @@ npm install -g generator-vagrantchef
 mkdir my-new-project && cd $_
 ```
 
-##### Run `yo vagrantchef`, and select desired technologies:
+##### Run `yo vagrantchef`:
 ```
 yo vagrantchef
 ```
