@@ -9,8 +9,8 @@ module.exports = yeoman.generators.Base.extend({
 
         // Have Yeoman greet the user.
         this.log(yosay(
-                    'Welcome to the ' + chalk.red('generator-vagrantchef') + ' generator!'
-                    ));
+            'Welcome to the ' + chalk.red('generator-vagrantchef') + ' generator!'
+        ));
 
         var prompts = [{
             type: 'input',
