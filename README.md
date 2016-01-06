@@ -7,16 +7,7 @@
 > Use the same cookbooks for development as integration
 
 [![Build Status](https://travis-ci.org/jacobgreenleaf/generator-vagrantchef.svg?branch=master)](https://travis-ci.org/jacobgreenleaf/generator-vagrantchef)
-
-> Yeoman generator for AngularJS + Gulp.
-
-> Lets you quickly set up a project with:
-> * your favorite technologies
-> * web best pratices.
-> * guidelines powered by Google.
-
-> Gulp provide fast workspace with quick feedback.
-
+[![npm version](https://badge.fury.io/js/generator-vagrantchef.svg)](https://badge.fury.io/js/generator-vagrantchef)
 
 ## Usage
 
