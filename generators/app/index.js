@@ -46,12 +46,6 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: function () {
     this.fs.copyTpl(
-            this.templatePath('Vagrantfile'),
-            this.destinationPath('Vagrantfile'),
-            this.props
-        );
-
-    this.fs.copyTpl(
             this.templatePath('Berksfile'),
             this.destinationPath('cookbooks/Berksfile'),
             this.props
