@@ -1,5 +1,7 @@
 source 'https://supermarket.chef.io'
 
-# cookbook 'foobar', '~> 1.0.0'
+# An example supermarket cookbook
+cookbook 'rsyslog', '~> 4.0.0'
 
+# The current cookbook
 cookbook '<%= name %>', path: '<%= name %>/'

@@ -6,25 +6,20 @@ Installation / Development
 
 Requirements: 
     
-* Ruby
+* Ruby + Bundler
 * Vagrant
-* [KitchenCI](http://kitchen.ci/) (installaion instructions below)
 
-First, install [KitchenCI](http://kitchen.ci/):
+Set up:
 
-    $ gem install test-kitchen
+    $ bundle install --with=development     # Install Kitchen, Berkshelf, ...
 
-Then, install the Kitchen driver you are going to use (We'll use Vagrant)
-    
-    $ gem install kitchen-vagrant
+Use Kitchen to provision and start a VM. 
 
-Finally, use Kitchen to provision and start a VM. 
-
-    $ kitchen test           # Full end-to-end test
+    $ bundle exec kitchen test              # Full end-to-end test
 
 `test` runs all the steps, but you can run partial steps during development since it's faster. 
 
-    $ kitchen create         # Bring up a VM
-    $ kitchen converge       # Make a chef-client run
-    $ kitchen login          # SSH in to the VM
+    $ bundle exec kitchen create            # Bring up a VM
+    $ bundle exec kitchen converge          # Make a chef-client run
+    $ bundle exec kitchen login             # SSH in to the VM
 

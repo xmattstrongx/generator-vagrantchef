@@ -21,12 +21,12 @@ describe('generator-vagrantchef:app', function () {
       '.kitchen.yml',
       'travis.kitchen.yml',
       '.travis.yml',
-      'cookbooks/Berksfile',
-      'cookbooks/foobar/metadata.rb',
-      'cookbooks/foobar/attributes/foobar.rb',
-      'cookbooks/foobar/recipes/create_file.rb',
-      'cookbooks/foobar/recipes/template_file.rb',
-      'cookbooks/foobar/templates/demo.erb'
+      'Berksfile',
+      'foobar/metadata.rb',
+      'foobar/attributes/foobar.rb',
+      'foobar/recipes/create_file.rb',
+      'foobar/recipes/template_file.rb',
+      'foobar/templates/demo.erb'
     ]);
   });
 });

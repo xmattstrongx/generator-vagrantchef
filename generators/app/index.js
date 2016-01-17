@@ -47,7 +47,7 @@ module.exports = yeoman.generators.Base.extend({
   writing: function () {
     this.fs.copyTpl(
             this.templatePath('Berksfile'),
-            this.destinationPath('cookbooks/Berksfile'),
+            this.destinationPath('Berksfile'),
             this.props
         );
 
@@ -81,25 +81,25 @@ module.exports = yeoman.generators.Base.extend({
 
     this.fs.copyTpl(
             this.templatePath('metadata.rb'),
-            this.destinationPath('cookbooks/' + this.props.name + '/metadata.rb'),
+            this.destinationPath(this.props.name + '/metadata.rb'),
             this.props
         );
 
     this.fs.copyTpl(
             this.templatePath('recipe-create_file.rb'),
-            this.destinationPath('cookbooks/' + this.props.name + '/recipes/create_file.rb'),
+            this.destinationPath(this.props.name + '/recipes/create_file.rb'),
             this.props
         );
 
     this.fs.copyTpl(
             this.templatePath('recipe-template_file.rb'),
-            this.destinationPath('cookbooks/' + this.props.name + '/recipes/template_file.rb'),
+            this.destinationPath(this.props.name + '/recipes/template_file.rb'),
             this.props
         );
 
     this.fs.copyTpl(
             this.templatePath('template-demo.erb'),
-            this.destinationPath('cookbooks/' + this.props.name + '/templates/demo.erb'),
+            this.destinationPath(this.props.name + '/templates/demo.erb'),
             this.props,
       {
         delimiter: '?'
@@ -108,7 +108,7 @@ module.exports = yeoman.generators.Base.extend({
 
     this.fs.copyTpl(
             this.templatePath('attributes.rb'),
-            this.destinationPath('cookbooks/' + this.props.name + '/attributes/' + this.props.name + '.rb'),
+            this.destinationPath(this.props.name + '/attributes/' + this.props.name + '.rb'),
             this.props
         );
   },
