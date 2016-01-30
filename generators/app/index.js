@@ -31,6 +31,11 @@ module.exports = yeoman.generators.Base.extend({
       default: 'ruby'
     }, {
       type: 'input',
+      name: 'chef_version',
+      message: 'Chef version?',
+      default: '11.10'
+    }, {
+      type: 'input',
       name: 'maintainer',
       message: 'Who is the maintainer of this project?',
       default: 'Joe Smith <jsmith@gmail.com>'

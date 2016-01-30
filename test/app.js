@@ -11,7 +11,8 @@ describe('generator-vagrantchef:app', function () {
               name: 'foobar',
               syncPath: '/path',
               language: 'go',
-              maintainer: 'Jacob Greenleaf'
+              maintainer: 'Jacob Greenleaf',
+              chef_version: '11.10'
             })
         .on('end', done);
   });
