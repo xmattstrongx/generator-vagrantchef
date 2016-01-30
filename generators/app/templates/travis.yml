@@ -5,10 +5,10 @@ install:
     # Install Chef via the Omnibus installer + ChefDK
   - curl -L https://www.chef.io/chef/install.sh | sudo bash -s -- -P chefdk
     # Chef includes an embedded installation of Ruby. Update RubyGems from within that embedded Ruby. 
-  - chef exec gem install bundler
-  - chef exec bundle update
+  - chef gem install bundler
+  - chef exec bundle --with=travis
 
 script:
     # Within the Chef embedded ruby, within the environment that includes binaries that were installed by RubyGems, 
     # run kitchen test. 
-    - KITCHEN_YAML=travis.kitchen.yml chef exec bundle exec kitchen test
+    - KITCHEN_YAML=travis.kitchen.yml chef exec kitchen test

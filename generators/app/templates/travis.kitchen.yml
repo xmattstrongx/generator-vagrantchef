@@ -12,6 +12,6 @@ platforms:
 suites:
   - name: test
     run_list:
+        - recipe[apt::default]
         - recipe[<%= name %>::create_file]
         - recipe[<%= name %>::template_file]
-        - recipe[rsyslog::default]
