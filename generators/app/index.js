@@ -31,7 +31,7 @@ module.exports = yeoman.generators.Base.extend({
       default: 'ruby'
     }, {
       type: 'input',
-      name: 'chef_version',
+      name: 'chefVersion',
       message: 'Chef version?',
       default: '11.10'
     }, {

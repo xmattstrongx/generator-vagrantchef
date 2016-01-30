@@ -12,7 +12,7 @@ describe('generator-vagrantchef:app', function () {
               syncPath: '/path',
               language: 'go',
               maintainer: 'Jacob Greenleaf',
-              chef_version: '11.10'
+              chefVersion: '11.10'
             })
         .on('end', done);
   });
